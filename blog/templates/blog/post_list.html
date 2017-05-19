@@ -7,16 +7,23 @@
             <h1><a href="http://sahul.pythonanywhere.com/">Official sahul's blog</a></h1>
         </div>
 
-        <div>
-            <p>published: 14.04.2017, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Who is helping you, don't forget them. Who is loving you, don't hate them. Who is believing you, don't cheat them.</p>
-        </div>
+        <!--<div>-->
+            <!--<p>published: 14.04.2017, 12:14</p>-->
+            <!--<h2><a href="">My first post</a></h2>-->
+            <!--<p>Who is helping you, don't forget them. Who is loving you, don't hate them. Who is believing you, don't cheat them.</p>-->
+        <!--</div>-->
 
-        <div>
-            <p>published: 14.05.2017, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Anything that makes you weak physically, intellectually and spiritually, reject as poison.</p>
-        </div>
+        <!--<div>-->
+            <!--<p>published: 14.05.2017, 12:14</p>-->
+            <!--<h2><a href="">My second post</a></h2>-->
+            <!--<p>Anything that makes you weak physically, intellectually and spiritually, reject as poison.</p>-->
+        <!--</div>-->
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
     </body>
 </html>
